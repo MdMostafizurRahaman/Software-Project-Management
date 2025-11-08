@@ -179,7 +179,7 @@ Sends a message to the AI and receives a response.
   "response": "Error: [error message]"
 }
 ```
-
+### Screenshots
 
 
 ## 🤝 Contributing
@@ -203,5 +203,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Assignment 1 - LLM Chatbot** | **Submitted by Group: Mostafizur Rahaman, Mosamma Sultana Trina, Fareya Azam**
+
 
 For any questions or support, please contact the group members.
