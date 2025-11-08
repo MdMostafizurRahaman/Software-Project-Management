@@ -1,4 +1,4 @@
-# 🤖 LLM Chatbot - Assignment 1
+# 🤖 LLM Chatbot - Assignment-1
 
 A modern, responsive AI-powered chatbot application built with React frontend and FastAPI backend, featuring real-time messaging and neural network integration.
 
@@ -207,4 +207,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 
 For any questions or support, please contact the group members.
+
+
 
