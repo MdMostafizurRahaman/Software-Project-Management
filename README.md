@@ -181,8 +181,7 @@ Sends a message to the AI and receives a response.
 ```
 ### Screenshots
 
-![Screenshot 1](./Screenshort/image.png)
-![Screenshot 2](./Screenshort/image%20copy.png)
+<img src="./Screenshort/image%20copy.png" width="300" alt="Screenshot 1"/> <img src="./Screenshort/image.png" width="300" alt="Screenshot 2"/>
 
 
 ## 🤝 Contributing
