@@ -179,7 +179,6 @@ Sends a message to the AI and receives a response.
   "response": "Error: [error message]"
 }
 ```
-### Screenshots
 
 <img src="./Screenshort/image%20copy.png" width="300" alt="Screenshot 1"/> <img src="./Screenshort/image.png" width="300" alt="Screenshot 2"/>
 
@@ -208,3 +207,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 
 For any questions or support, please contact the group members.
+
