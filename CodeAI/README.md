@@ -62,6 +62,8 @@ pip install -r requirements.txt
 4. Start the app:
    ```
    streamlit run app.py
+   or,
+   python -m streamlit run app.py 
    ```
 5. Your browser will open to the UI. Enter a prompt, choose a language, and generate code. Optionally paste reference code to evaluate with CodeBLEU.
 
@@ -137,16 +139,18 @@ The `CodeGenerator` class generates code based on user queries:
 
 ## CodeBLEU Evaluator
 
-The `CodeBLEUEvaluator` class evaluates code correctness:
+The `CodeBLEUEvaluator` class evaluates code correctness using the Code-BLEU metric as defined in the research paper.
 
-- **Metrics**:
-  - BLEU Score: N-gram overlap between generated and reference code
-  - Syntax Match: Keyword and structure similarity
-  - Dataflow Match: Variable usage pattern similarity
-  - AST Match: Abstract Syntax Tree similarity
+- **Components** (as per PDF formula):
+  - **NG (n-gram BLEU)**: Standard modified BLEU score with simple tokenization
+  - **WNG (weighted n-gram)**: Identifier-aware n-gram matching (identifiers weighted 2.0, others 1.0)
+  - **AST (syntax/AST match)**: Abstract Syntax Tree similarity (structural matching)
+  - **DF (data-flow match)**: Data flow pattern similarity (variable/data dependency patterns)
 
-- **CodeBLEU Score**: Weighted combination of all metrics
+- **CodeBLEU Formula**: `CodeBLEU = 0.25 × NG + 0.25 × WNG + 0.25 × AST + 0.25 × DF`
 - **Correctness Threshold**: Code is considered correct if CodeBLEU >= 0.75
+
+The implementation follows the exact formula and calculation method described in the Code-BLEU research paper, using simple tokenization, identifier-aware weighting, and structural pattern matching.
 
 ## Project Structure
 

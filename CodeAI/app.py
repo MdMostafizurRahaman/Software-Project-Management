@@ -185,18 +185,18 @@ def main():
 		with col1:
 			st.metric("CodeBLEU", f"{eval_results['codebleu']:.3f}")
 		with col2:
-			st.metric("BLEU", f"{eval_results['bleu']:.3f}")
+			st.metric("NG (n-gram)", f"{eval_results['ng']:.3f}")
 		with col3:
-			st.metric("Syntax", f"{eval_results['syntax_match']:.3f}")
+			st.metric("WNG (weighted)", f"{eval_results['wng']:.3f}")
 		with col4:
-			st.metric("Dataflow", f"{eval_results['dataflow_match']:.3f}")
+			st.metric("AST", f"{eval_results['ast']:.3f}")
 		with col5:
-			st.metric("AST", f"{eval_results['ast_match']:.3f}")
+			st.metric("DF (data-flow)", f"{eval_results['df']:.3f}")
 
 		if eval_results.get("is_correct"):
-			st.success("Correct according to threshold")
+			st.success("Correct according to CodeBLEU score")
 		else:
-			st.info("Thanks for evaluating the code!")
+			st.info("Wrong according to CodeBLEU score")
 
 
 if __name__ == "__main__":
