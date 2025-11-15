@@ -104,7 +104,7 @@ class CodeBLEUEvaluator:
     
     def _tokenize_code(self, code: str) -> List[str]:
         """
-        Simple tokenization of code as per PDF.
+        Simple tokenization of code
         Splits on whitespace and punctuation, keeping tokens separate.
         """
         # Replace common punctuation with spaces, then split
@@ -114,9 +114,6 @@ class CodeBLEUEvaluator:
     
     def _calculate_ng_bleu(self, generated: str, reference: str) -> float:
         """
-        Calculate NG (n-gram BLEU score) - standard modified BLEU.
-        Uses simple tokenization as per PDF example.
-        
         Implements BLEU with unigram and bigram precision, geometric mean.
         """
         gen_tokens = self._tokenize_code(generated)
