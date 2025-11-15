@@ -170,7 +170,7 @@ class CodeBLEUEvaluator:
         geometric_mean = (unigram_precision * bigram_precision) ** 0.5
         
         # Brevity penalty (BP)
-        if len(gen_tokens) <= len(ref_tokens):
+        if len(gen_tokens) >= len(ref_tokens):
             bp = 1.0
         else:
             bp = (len(ref_tokens) / len(gen_tokens)) ** 0.5
